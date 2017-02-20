@@ -1,4 +1,6 @@
 CFLAGS += -Wall
+OCAMLPKG += tsdl 
 
 !cc = |> gcc $(CFLAGS) -c %f -o %o |> %B.o
-!ocaml = |> ocamlopt -c %f -o %o |> %B.o | %O.cmi %O.cmx
+!ocaml = |> ocamlfind ocamlopt -c -package $(OCAMLPKG) %f -o %o |> %B.o | %O.cmi %O.cmx
+!oclink = |> ocamlfind ocamlopt -package $(OCAMLPKG) %f -o %o -linkpkg |> 

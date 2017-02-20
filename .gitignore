@@ -1,3 +1,5 @@
 .tup
 *.cm*
 *.o
+*.swp
+build/

@@ -1,2 +1,2 @@
 include_rules
-: foreach src/*.cmx | src/*.o |> !oclink |> build/hello
+: foreach src/*.cmx | src/*.o |> !oclink |> build/braidshow

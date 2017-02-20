@@ -1,0 +1,4 @@
+CFLAGS += -Wall
+
+!cc = |> gcc $(CFLAGS) -c %f -o %o |> %B.o
+!ocaml = |> ocamlopt -c %f -o %o |> %B.o | %O.cmi %O.cmx
